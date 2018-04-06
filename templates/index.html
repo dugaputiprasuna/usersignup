@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    
+{% block content %}
+
+<html>
+<body>
+
+<form action="/UserSubmit" method="GET">
+<b>User name:<br>
+<input type="text" name="username" value="{{ username }}">
+{{unamemsg}}
+ 
+<br>
+Password:<br>
+<input type="password" name="password">
+{{passwordmsg}}
+<br>
+verifypassword:<br>
+<input type="password" name="verifypassword">
+{{cpasswordmsg}}
+<br><br>
+<input type="submit">
+{% if welcomemsg|length > 0 %}
+
+    <!--<p>Welcome,[{{username}}]!</p>!-->   
+{% endif %}
+</form>
+
+</body>
+</html>
+{% endblock %}
